@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karigar Collective — 4P Marketing Plan 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#16100A;--cream:#FBF7F0;--warm:#F4EDE0;--border:#E2D5C0;
+  --p1:#B5440E;--p1l:#F0E8E2;--p1m:#7A2D08;
+  --p2:#7A5C0A;--p2l:#F0EBE0;--p2m:#4A3805;
+  --p3:#2C5C28;--p3l:#E2EDE0;--p3m:#1A3818;
+  --p4:#3A2870;--p4l:#E8E4F2;--p4m:#22185A;
+  --muted:#7A6A58;--rule:rgba(0,0,0,.09);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Outfit',sans-serif;background:var(--cream);color:var(--ink);line-height:1.7;font-size:15px;overflow-x:hidden;}
+
+/* ── COVER ── */
+.cover{
+  background:var(--ink);min-height:100vh;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:60px 40px;position:relative;overflow:hidden;
+}
+.cover-bg{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 60% 55% at 50% -10%,rgba(181,68,14,.22) 0%,transparent 65%),
+    radial-gradient(ellipse 40% 35% at 85% 85%,rgba(122,92,10,.14) 0%,transparent 60%),
+    radial-gradient(ellipse 30% 40% at 10% 70%,rgba(58,40,112,.12) 0%,transparent 55%);
+}
+.cover-dots{
+  position:absolute;inset:0;
+  background-image:radial-gradient(circle,rgba(255,255,255,.06) 1px,transparent 1px);
+  background-size:28px 28px;
+}
+.cover-rule{width:48px;height:1px;background:rgba(255,255,255,.25);margin:0 auto 36px;position:relative;z-index:1;}
+.cover-eyebrow{font-size:10px;letter-spacing:.38em;color:rgba(255,255,255,.45);text-transform:uppercase;margin-bottom:24px;position:relative;z-index:1;}
+.cover-brand{font-family:'Playfair Display',serif;font-size:clamp(56px,9vw,96px);font-weight:400;color:#fff;line-height:1;position:relative;z-index:1;margin-bottom:4px;}
+.cover-brand em{color:#D4804A;font-style:normal;}
+.cover-tagline{font-family:'Playfair Display',serif;font-style:italic;font-size:17px;color:rgba(255,255,255,.5);letter-spacing:.06em;margin-bottom:52px;position:relative;z-index:1;}
+.cover-title{font-size:12px;letter-spacing:.28em;color:rgba(255,255,255,.55);text-transform:uppercase;position:relative;z-index:1;margin-bottom:8px;}
+.cover-sub{font-size:12px;color:rgba(255,255,255,.28);letter-spacing:.1em;position:relative;z-index:1;}
+.cover-4p{display:flex;justify-content:center;gap:10px;margin-top:44px;position:relative;z-index:1;flex-wrap:wrap;}
+.cover-p-pill{
+  padding:7px 20px;border-radius:30px;font-size:11px;letter-spacing:.12em;font-weight:500;
+  border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.6);
+}
+.cover-bottom{position:absolute;bottom:32px;left:0;right:0;display:flex;justify-content:space-between;padding:0 50px;z-index:1;}
+.cover-bottom span{font-size:10px;color:rgba(255,255,255,.22);letter-spacing:.14em;text-transform:uppercase;}
+
+/* ── RULE BANNER ── */
+.rule-banner{background:var(--ink);display:flex;align-items:stretch;overflow:hidden;}
+.rule-cell{
+  flex:1;display:flex;align-items:center;justify-content:center;gap:10px;
+  padding:18px 24px;border-right:1px solid rgba(255,255,255,.07);
+  text-decoration:none;transition:background .18s;
+}
+.rule-cell:last-child{border-right:none;}
+.rule-cell:hover{background:rgba(255,255,255,.04);}
+.rule-cell-num{font-family:'Playfair Display',serif;font-size:26px;font-weight:600;line-height:1;}
+.rule-cell-label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.38);}
+
+/* ── LOGIC BADGE ── */
+.logic-strip{
+  background:var(--warm);border-bottom:1px solid var(--border);
+  padding:18px 60px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+}
+.logic-tag{
+  font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;
+  padding:4px 14px;border-radius:20px;background:var(--ink);color:var(--cream);
+}
+.logic-text{font-size:13px;color:var(--muted);}
+.logic-text strong{color:var(--ink);}
+
+/* ── MAIN ── */
+.wrap{max-width:980px;margin:0 auto;padding:0 50px 100px;}
+
+/* ── P-SECTION HEADER ── */
+.p-header{
+  margin:0 -50px;padding:56px 50px 0;
+  border-top:4px solid;position:relative;
+}
+.p1-hdr{border-color:var(--p1);}
+.p2-hdr{border-color:var(--p2);}
+.p3-hdr{border-color:var(--p3);}
+.p4-hdr{border-color:var(--p4);}
+
+.p-num-bg{
+  position:absolute;top:30px;right:50px;
+  font-family:'Playfair Display',serif;font-size:100px;font-weight:700;
+  opacity:.05;line-height:1;user-select:none;pointer-events:none;
+}
+.p-eyebrow{font-size:10px;letter-spacing:.3em;text-transform:uppercase;margin-bottom:10px;font-weight:600;}
+.p1-hdr .p-eyebrow{color:var(--p1);}
+.p2-hdr .p-eyebrow{color:var(--p2);}
+.p3-hdr .p-eyebrow{color:var(--p3);}
+.p4-hdr .p-eyebrow{color:var(--p4);}
+
+.p-title{font-family:'Playfair Display',serif;font-size:clamp(30px,4vw,46px);font-weight:600;line-height:1.1;color:var(--ink);margin-bottom:8px;}
+.p-pill{display:inline-block;font-size:11px;letter-spacing:.1em;padding:4px 14px;border-radius:20px;font-weight:500;margin-bottom:28px;}
+.p1-pill{background:var(--p1l);color:var(--p1m);}
+.p2-pill{background:var(--p2l);color:var(--p2m);}
+.p3-pill{background:var(--p3l);color:var(--p3m);}
+.p4-pill{background:var(--p4l);color:var(--p4m);}
+
+/* ── SECTION BODY ── */
+.p-body{padding:40px 0 60px;border-bottom:1px solid var(--border);}
+.p-body:last-child{border-bottom:none;}
+.p-intro{font-family:'Playfair Display',serif;font-style:italic;font-size:17px;color:var(--muted);line-height:1.65;max-width:680px;margin-bottom:36px;padding-left:18px;border-left:3px solid var(--border);}
+
+/* ── CARDS ── */
+.card-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px;margin:20px 0;}
+.card{background:#fff;border:1px solid var(--border);border-radius:8px;padding:24px;position:relative;}
+.card-accent{position:absolute;top:0;left:0;width:3px;height:100%;border-radius:3px 0 0 3px;}
+.card-p1 .card-accent{background:var(--p1);}
+.card-p2 .card-accent{background:var(--p2);}
+.card-p3 .card-accent{background:var(--p3);}
+.card-p4 .card-accent{background:var(--p4);}
+.card-head{font-family:'Playfair Display',serif;font-size:18px;font-weight:600;color:var(--ink);margin-bottom:8px;}
+.card-body{font-size:13.5px;color:#4A3A2A;line-height:1.7;}
+
+/* ── PRICE TIERS ── */
+.tier-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;margin:20px 0;}
+.tier{border-radius:8px;padding:24px 20px;border:1px solid var(--border);}
+.tier.entry{background:var(--warm);}
+.tier.core{background:var(--ink);}
+.tier.premium{background:linear-gradient(140deg,#1A1008,#0E0805);border-color:rgba(181,68,14,.3);}
+.tier.biz{background:#0E1820;border-color:rgba(44,92,40,.3);}
+.tier-label{font-size:10px;letter-spacing:.25em;text-transform:uppercase;font-weight:600;margin-bottom:10px;}
+.tier.entry .tier-label{color:var(--p2);}
+.tier.core .tier-label{color:rgba(255,255,255,.45);}
+.tier.premium .tier-label{color:#D4804A;}
+.tier.biz .tier-label{color:#6AB860;}
+.tier-price{font-family:'Playfair Display',serif;font-size:26px;font-weight:600;line-height:1;margin-bottom:10px;}
+.tier.entry .tier-price{color:var(--ink);}
+.tier.core .tier-price,.tier.premium .tier-price,.tier.biz .tier-price{color:#fff;}
+.tier-examples{font-size:12px;line-height:1.65;}
+.tier.entry .tier-examples{color:var(--muted);}
+.tier.core .tier-examples,.tier.premium .tier-examples,.tier.biz .tier-examples{color:rgba(255,255,255,.5);}
+
+/* ── TABLE ── */
+.tbl{width:100%;border-collapse:collapse;margin:20px 0;font-size:13.5px;}
+.tbl thead tr{background:var(--ink);}
+.tbl thead th{padding:12px 16px;text-align:left;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);font-weight:500;}
+.tbl tbody tr{border-bottom:1px solid var(--border);}
+.tbl tbody tr:hover{background:var(--warm);}
+.tbl tbody td{padding:12px 16px;color:var(--ink);vertical-align:top;line-height:1.6;}
+.tbl tbody td:first-child{font-weight:600;}
+
+/* ── CHANNEL BLOCKS ── */
+.ch-block{background:#fff;border:1px solid var(--border);border-radius:8px;margin-bottom:20px;overflow:hidden;}
+.ch-head{padding:18px 24px;background:var(--ink);display:flex;align-items:center;gap:14px;}
+.ch-icon{font-size:20px;}
+.ch-name{font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:#fff;}
+.ch-tag{margin-left:auto;font-size:11px;padding:3px 12px;border-radius:12px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.1);}
+.ch-body{padding:24px;}
+
+/* ── CAMPAIGN CARD ── */
+.camp{background:var(--cream);border:1px solid var(--border);border-left:4px solid var(--p4);border-radius:0 6px 6px 0;padding:20px 24px;margin-bottom:16px;}
+.camp-season{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--p2);margin-bottom:6px;font-weight:600;}
+.camp-name{font-family:'Playfair Display',serif;font-size:22px;font-weight:600;color:var(--ink);margin-bottom:8px;}
+.camp-body{font-size:13.5px;color:#4A3A2A;line-height:1.72;}
+
+/* ── HIGHLIGHT ── */
+.hl{background:var(--ink);border-radius:8px;padding:32px 36px;margin:24px 0;position:relative;overflow:hidden;}
+.hl::before{content:'"';position:absolute;top:-15px;right:18px;font-family:'Playfair Display',serif;font-size:160px;color:rgba(255,255,255,.05);line-height:1;}
+.hl-label{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:12px;}
+.hl-text{font-family:'Playfair Display',serif;font-style:italic;font-size:20px;color:#fff;line-height:1.55;position:relative;z-index:1;font-weight:400;}
+
+/* ── BUDGET BARS ── */
+.bgt-item{display:grid;grid-template-columns:200px 1fr 55px;align-items:center;gap:14px;padding:11px 0;border-bottom:1px solid var(--border);}
+.bgt-label{font-size:13px;font-weight:500;color:var(--ink);}
+.bgt-track{background:var(--warm);border-radius:3px;height:7px;overflow:hidden;}
+.bgt-fill{height:100%;border-radius:3px;}
+.bgt-pct{font-family:'Playfair Display',serif;font-size:15px;font-weight:600;text-align:right;}
+
+/* ── KPI ── */
+.kpi-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px;margin:20px 0;}
+.kpi{background:#fff;border:1px solid var(--border);border-radius:8px;padding:20px 16px;text-align:center;}
+.kpi-val{font-family:'Playfair Display',serif;font-size:32px;font-weight:600;line-height:1;margin-bottom:6px;}
+.kpi-lbl{font-size:12px;color:var(--muted);line-height:1.5;}
+
+/* ── TIMELINE ── */
+.tl{padding-left:38px;margin:20px 0;position:relative;}
+.tl::before{content:'';position:absolute;left:11px;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,var(--p4),var(--p2),transparent);}
+.tl-item{position:relative;margin-bottom:28px;}
+.tl-item::before{content:'';position:absolute;left:-33px;top:6px;width:9px;height:9px;border-radius:50%;background:var(--p4);border:2px solid var(--cream);box-shadow:0 0 0 2px var(--p4);}
+.tl-phase{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--p4);margin-bottom:4px;font-weight:600;}
+.tl-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:var(--ink);margin-bottom:7px;}
+.tl-body{font-size:13.5px;color:#4A3A2A;line-height:1.75;}
+
+/* ── NOTE ── */
+.note{background:rgba(181,68,14,.06);border:1px solid rgba(181,68,14,.18);border-radius:6px;padding:16px 20px;margin:16px 0;font-size:13.5px;color:var(--ink);line-height:1.7;}
+.note strong{color:var(--p1);}
+
+/* ── STAT ROW ── */
+.stat-row{display:flex;flex-wrap:wrap;gap:16px;margin:20px 0;}
+.stat{flex:1;min-width:130px;background:#fff;border:1px solid var(--border);border-radius:8px;padding:16px;text-align:center;}
+.stat-val{font-family:'Playfair Display',serif;font-size:28px;font-weight:600;color:var(--p2);display:block;margin-bottom:4px;}
+.stat-lbl{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;}
+
+/* ── TYPOGRAPHY ── */
+h3{font-family:'Playfair Display',serif;font-size:22px;font-weight:600;color:var(--ink);margin:28px 0 12px;}
+h4{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--ink);margin:20px 0 8px;}
+p{font-size:14.5px;color:#3A2A1A;line-height:1.8;margin-bottom:12px;}
+ul.pl,ol.pl{list-style:none;margin:10px 0 16px;padding:0;}
+ul.pl li,ol.pl li{font-size:14px;padding:6px 0 6px 22px;border-bottom:1px solid rgba(0,0,0,.05);position:relative;line-height:1.65;color:#3A2A1A;}
+ul.pl li::before{content:'◆';position:absolute;left:0;font-size:6px;top:12px;color:var(--p1);}
+ol.pl{counter-reset:c;}ol.pl li{counter-increment:c;}
+ol.pl li::before{content:counter(c,decimal-leading-zero);position:absolute;left:0;font-family:'Playfair Display',serif;font-size:12px;font-weight:600;color:var(--p1);top:7px;}
+strong{color:var(--ink);font-weight:600;}
+em{color:var(--muted);font-style:italic;}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin:16px 0;}
+.tag-row{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0;}
+.tag{font-size:11px;padding:4px 12px;border-radius:16px;border:1px solid var(--border);color:var(--muted);background:var(--warm);}
+.tag.p1c{background:var(--p1l);border-color:rgba(181,68,14,.25);color:var(--p1m);}
+.tag.p2c{background:var(--p2l);border-color:rgba(122,92,10,.25);color:var(--p2m);}
+.tag.p3c{background:var(--p3l);border-color:rgba(44,92,40,.25);color:var(--p3m);}
+
+/* ── FOOTER ── */
+.footer{background:var(--ink);padding:44px 60px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px;}
+.footer-brand{font-family:'Playfair Display',serif;font-size:26px;font-weight:400;color:#fff;}
+.footer-brand em{color:#D4804A;font-style:normal;}
+.footer-right{text-align:right;font-size:11px;color:rgba(255,255,255,.25);letter-spacing:.1em;}
+.footer-ps{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;}
+.footer-p{font-size:10px;padding:3px 10px;border-radius:10px;border:1px solid;font-weight:600;}
+
+@media(max-width:680px){
+  .wrap{padding:0 22px 60px;}
+  .two{grid-template-columns:1fr;}
+  .p-header{margin:0 -22px;padding:40px 22px 0;}
+  .bgt-item{grid-template-columns:1fr 1fr;}.bgt-label{grid-column:1/-1;}
+  .logic-strip{padding:16px 22px;}
+  .rule-banner{flex-direction:column;}
+  .cover-bottom{padding:0 22px;}
+  .footer{padding:36px 24px;}
+}
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-bg"></div>
+  <div class="cover-dots"></div>
+  <div class="cover-eyebrow">Confidential · Startup Marketing Strategy · 2026</div>
+  <div class="cover-brand">Karigar<em>.</em><br>Collective</div>
+  <div class="cover-tagline">"Handmade. Heritage. Heart."</div>
+  <div class="cover-rule"></div>
+  <div class="cover-title">4P Marketing Plan</div>
+  <div class="cover-sub">Product-Based Business · Execution-Ready · Investor-Grade</div>
+  <div class="cover-4p">
+    <span class="cover-p-pill" style="border-color:rgba(181,68,14,.4);color:#D4804A;">P1 · Product</span>
+    <span class="cover-p-pill" style="border-color:rgba(122,92,10,.4);color:#C9A840;">P2 · Price</span>
+    <span class="cover-p-pill" style="border-color:rgba(44,92,40,.4);color:#60B860;">P3 · Place</span>
+    <span class="cover-p-pill" style="border-color:rgba(58,40,112,.4);color:#A090D0;">P4 · Promotion</span>
+  </div>
+  <div class="cover-bottom">
+    <span>Karigar Collective © 2026</span>
+    <span>Confidential</span>
+    <span>4P Edition · Product-Based</span>
+  </div>
+</div>
+
+<!-- NAV STRIP -->
+<div class="rule-banner">
+  <a href="#p1" class="rule-cell">
+    <span class="rule-cell-num" style="color:#D4804A;">P1</span>
+    <span class="rule-cell-label">Product</span>
+  </a>
+  <a href="#p2" class="rule-cell">
+    <span class="rule-cell-num" style="color:#C9A840;">P2</span>
+    <span class="rule-cell-label">Price</span>
+  </a>
+  <a href="#p3" class="rule-cell">
+    <span class="rule-cell-num" style="color:#60B860;">P3</span>
+    <span class="rule-cell-label">Place</span>
+  </a>
+  <a href="#p4" class="rule-cell">
+    <span class="rule-cell-num" style="color:#A090D0;">P4</span>
+    <span class="rule-cell-label">Promotion</span>
+  </a>
+</div>
+
+<!-- LOGIC BADGE -->
+<div class="logic-strip">
+  <span class="logic-tag">4 Ps Applied</span>
+  <span class="logic-text"><strong>Why 4 Ps?</strong> Karigar Collective is a product-based business — it sells physical handmade goods. The classic 4P framework (Product, Price, Place, Promotion) is the precise fit for a product-centric startup model.</span>
+</div>
+
+<div class="wrap">
+
+<!-- ════ EXECUTIVE SUMMARY ════ -->
+<div style="padding:70px 0 50px;border-bottom:1px solid var(--border);">
+  <p style="font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;font-weight:600;">Preface</p>
+  <h2 style="font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,42px);font-weight:600;color:var(--ink);margin-bottom:16px;line-height:1.15;">Executive Summary</h2>
+  <div class="p-intro">Karigar Collective is a premium handmade craft marketplace built on a product-first philosophy. Everything flows from the product — how it is priced, where it is sold, and how it is marketed. This 4P plan is the strategic foundation for a lean, culturally-rich startup entering an underserved market.</div>
+  <p>The global handmade and artisan goods market is projected to exceed <strong>$1.2 trillion by 2027</strong>. Pakistan — home to some of the world's oldest living craft traditions — has virtually no premium digital representation in this market. Karigar Collective is built to close that gap by treating handmade Pakistani craft not as a cottage product, but as a cultural asset deserving premium positioning, thoughtful pricing, strategic distribution, and storytelling-led promotion.</p>
+  <div class="hl">
+    <div class="hl-label">The Core Thesis</div>
+    <div class="hl-text">The next consumer does not just want a product. They want provenance — proof of who made it, where it came from, and why it matters. Every Karigar product carries that proof embedded in its story.</div>
+  </div>
+  <div class="stat-row">
+    <div class="stat"><span class="stat-val">$1.2T</span><span class="stat-lbl">Global artisan market by 2027</span></div>
+    <div class="stat"><span class="stat-val">72%</span><span class="stat-lbl">Millennials prefer mission-driven brands</span></div>
+    <div class="stat"><span class="stat-val">3.4×</span><span class="stat-lbl">Premium paid for handmade with story</span></div>
+    <div class="stat"><span class="stat-val">0</span><span class="stat-lbl">Premium digital PK craft marketplaces today</span></div>
+  </div>
+</div>
+
+<!-- ════════════════════════
+     P1 — PRODUCT
+════════════════════════ -->
+<div id="p1">
+  <div class="p-header p1-hdr">
+    <div class="p-num-bg" style="color:var(--p1);">P1</div>
+    <div class="p-eyebrow">First P of Marketing</div>
+    <h2 class="p-title">Product Strategy</h2>
+    <span class="p-pill p1-pill">What we sell & how we differentiate it</span>
+  </div>
+  <div class="p-body">
+    <div class="p-intro">Karigar Collective's product is not simply a handmade object — it is a curated cultural artefact with documented provenance. The product exists in three layers simultaneously.</div>
+
+    <h3>The Three-Layer Product Model</h3>
+    <div class="card-row">
+      <div class="card card-p1"><div class="card-accent"></div>
+        <div class="card-head">Layer 1 · The Physical Object</div>
+        <div class="card-body">The tangible handmade item — ceramic, textile, woodwork, leather. Every product must pass a <strong>4-point curation test:</strong> demonstrably handmade, made by a verified Pakistani artisan, meets minimum quality threshold, and photographed to Karigar visual standards. Without all four, it does not list.</div>
+      </div>
+      <div class="card card-p1"><div class="card-accent"></div>
+        <div class="card-head">Layer 2 · The Story Product</div>
+        <div class="card-body">The <strong>Artisan Passport</strong> attached to every item — the maker's portrait, city, craft tradition, generational legacy, and a 60-second workshop video via QR code. The story is the product. Without it, a Karigar ceramic is just a ceramic. With it, it becomes a cultural object with a human behind it.</div>
+      </div>
+      <div class="card card-p1"><div class="card-accent"></div>
+        <div class="card-head">Layer 3 · The Experience</div>
+        <div class="card-body">The full ownership ritual — branded packaging, handwritten artisan note, care instruction card, and post-purchase email story sequence. The experience of owning a Karigar product must be as beautiful as the object itself. This layer turns buyers into ambassadors.</div>
+      </div>
+    </div>
+
+    <h3>Product Category Architecture</h3>
+    <table class="tbl">
+      <thead><tr><th>Category</th><th>Launch Products</th><th>Primary Segment</th><th>AOV Range</th><th>Phase</th></tr></thead>
+      <tbody>
+        <tr><td>Ceramics & Pottery</td><td>Blue pottery (Multan), hand-painted plates, wheel-thrown mugs</td><td>Home décor, gift shoppers</td><td>PKR 2,500–8,000</td><td>🔴 Launch</td></tr>
+        <tr><td>Textiles & Fabric</td><td>Ajrak stoles, Khaes pieces, embroidered cushion covers</td><td>Gen-Z, millennials</td><td>PKR 1,800–5,500</td><td>🔴 Launch</td></tr>
+        <tr><td>Home Décor Objects</td><td>Hand-carved trays, brass inlay boxes, woven baskets</td><td>Home décor, gifting</td><td>PKR 3,500–12,000</td><td>🔴 Launch</td></tr>
+        <tr><td>Wearables</td><td>Hand-stitched Khussas, embroidered totes, beaded jewellery</td><td>Gen-Z, aesthetic buyers</td><td>PKR 2,000–7,000</td><td>🟡 Month 3+</td></tr>
+        <tr><td>Gift Sets & Bundles</td><td>Curated craft boxes, Eid hampers, wedding gifts</td><td>Gift shoppers, corporate</td><td>PKR 6,000–25,000</td><td>🟡 Month 4+</td></tr>
+        <tr><td>Wall Art</td><td>Miniature paintings, block-print hangings, Truck Art panels</td><td>Décor enthusiasts, diaspora</td><td>PKR 4,000–18,000</td><td>🔵 Month 6+</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Product USP — 5 Differentiators</h3>
+    <div class="card-row">
+      <div class="card card-p1"><div class="card-accent"></div><div class="card-head">Artisan Passport</div><div class="card-body">Every product has a verified maker profile — photograph, video, craft history. No competitor can buy this. It is built through relationships, trust, and field visits. This is our deepest moat.</div></div>
+      <div class="card card-p1"><div class="card-accent"></div><div class="card-head">Curatorial Gatekeeping</div><div class="card-body">A jury-based approval process. We don't list everything — we curate. Scarcity and selectivity communicate premium before the customer reads a single word of copy.</div></div>
+      <div class="card card-p1"><div class="card-accent"></div><div class="card-head">The Imperfection Premium</div><div class="card-body">We celebrate irregularities that prove handmade — uneven glaze, visible brush strokes, asymmetric weave. Positioned not as flaws but as authenticity marks. The imperfection is the point.</div></div>
+      <div class="card card-p1"><div class="card-accent"></div><div class="card-head">Regional Heritage Coding</div><div class="card-body">Every product tagged with region, craft tradition, and approximate age of technique. Customers aren't buying décor — they're buying a documented piece of Pakistani heritage.</div></div>
+      <div class="card card-p1"><div class="card-accent"></div><div class="card-head">Limited Edition Drops</div><div class="card-body">Monthly "Edit" drops of curated thematic collections. Once a batch sells, it may not return for weeks. This creates genuine scarcity — the opposite of the infinite-scroll Amazon experience.</div></div>
+    </div>
+
+    <h3>Market Positioning</h3>
+    <div class="hl">
+      <div class="hl-label">Positioning Statement</div>
+      <div class="hl-text">For culturally curious, aesthetically driven buyers who refuse mass production — Karigar Collective is the only marketplace that pairs premium craft curation with artisan transparency, making every purchase a connection between the maker and the modern world.</div>
+    </div>
+
+    <h3>Competitor Landscape</h3>
+    <table class="tbl">
+      <thead><tr><th>Competitor</th><th>Strength</th><th>Weakness</th><th>Our Edge</th></tr></thead>
+      <tbody>
+        <tr><td>Etsy</td><td>Global reach, SEO authority</td><td>No Pakistani cultural curation</td><td>We own the Pakistani craft narrative entirely</td></tr>
+        <tr><td>Daraz</td><td>Logistics, brand awareness</td><td>Race-to-bottom pricing, no editorial identity</td><td>Our buyer is not Daraz's buyer — different segment</td></tr>
+        <tr><td>Kaarvan Crafts</td><td>Ethical positioning</td><td>Outdated UX, no modern brand aesthetic</td><td>We have the brand, digital execution, and aesthetic they lack</td></tr>
+        <tr><td>Instagram Bazaars</td><td>Low overhead, direct</td><td>No trust infrastructure, no quality control</td><td>We offer curation and trust no individual page can replicate</td></tr>
+      </tbody>
+    </table>
+
+    <h3>SWOT Analysis</h3>
+    <div class="two">
+      <div>
+        <h4 style="color:var(--p3);">Strengths</h4>
+        <ul class="pl">
+          <li>First-mover in premium Pakistani craft eCommerce</li>
+          <li>Deeply emotional brand built for the storytelling era</li>
+          <li>Highly shareable product category on social</li>
+          <li>Pakistani heritage pride resurgence among youth</li>
+          <li>Asset-light commission model — low COGS risk</li>
+        </ul>
+        <h4 style="color:var(--p3);margin-top:20px;">Opportunities</h4>
+        <ul class="pl">
+          <li>$1.2T global artisan market, zero premium PK presence</li>
+          <li>Pakistani diaspora — high AOV, willing to pay shipping</li>
+          <li>TikTok algorithm favours artisan/maker content</li>
+          <li>Home décor is the #1 category on Pinterest globally</li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color:var(--p1);">Weaknesses</h4>
+        <ul class="pl">
+          <li>Limited launch budget — strict channel prioritisation needed</li>
+          <li>Artisan digitisation is time-intensive at scale</li>
+          <li>No existing audience or brand recognition at launch</li>
+          <li>COD-heavy market creates cash flow timing issues</li>
+        </ul>
+        <h4 style="color:var(--p1);margin-top:20px;">Threats</h4>
+        <ul class="pl">
+          <li>A funded competitor could enter the premium segment</li>
+          <li>Algorithm changes can disrupt organic reach overnight</li>
+          <li>Counterfeit "handmade" products eroding category trust</li>
+          <li>Currency devaluation affecting international pricing</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════
+     P2 — PRICE
+════════════════════════ -->
+<div id="p2">
+  <div class="p-header p2-hdr">
+    <div class="p-num-bg" style="color:var(--p2);">P2</div>
+    <div class="p-eyebrow">Second P of Marketing</div>
+    <h2 class="p-title">Pricing Strategy</h2>
+    <span class="p-pill p2-pill">How we price, position & protect our value</span>
+  </div>
+  <div class="p-body">
+    <div class="p-intro">Price is not just a number — it is the loudest signal of what the product is worth. Our pricing strategy communicates premium quality, respects artisan labour, and positions us firmly above the commodity market.</div>
+
+    <h3>Pricing Philosophy — Value-Based, Not Cost-Plus</h3>
+    <p>We price based on the <strong>cultural and aesthetic value</strong> our product delivers — not simply what it costs to produce. This is critical for three reasons:</p>
+    <ul class="pl">
+      <li>It protects artisan margins — makers receive a fair base regardless of how we mark up.</li>
+      <li>It signals premium quality — underpriced handmade craft triggers doubt, not desire, in our target buyer's mind.</li>
+      <li>It creates meaningful room for promotions — a 20% Eid discount on a PKR 5,000 item feels generous; the same on a PKR 500 item is irrelevant.</li>
+    </ul>
+
+    <h3>Four-Tier Pricing Architecture</h3>
+    <div class="tier-grid">
+      <div class="tier entry">
+        <div class="tier-label">Entry Tier</div>
+        <div class="tier-price">PKR 800–2,500</div>
+        <div class="tier-examples"><strong style="color:var(--ink);">Purpose:</strong> First-purchase conversion, impulse buys, gift add-ons<br><br><strong style="color:var(--ink);">Products:</strong> Ceramic coasters, embroidered pouches, block-print bookmarks, small pottery pieces</div>
+      </div>
+      <div class="tier core">
+        <div class="tier-label">Core Tier</div>
+        <div class="tier-price">PKR 2,500–7,000</div>
+        <div class="tier-examples"><strong>Purpose:</strong> Main revenue driver — the standard Karigar purchase<br><br><strong>Products:</strong> Ajrak stoles, embroidered cushion covers, ceramic mugs/vases, hand-carved trays, Khussas</div>
+      </div>
+      <div class="tier premium">
+        <div class="tier-label">Premium Tier ⭐ Best Margin</div>
+        <div class="tier-price">PKR 7,000–25,000</div>
+        <div class="tier-examples"><strong>Purpose:</strong> Brand halo, collector pieces, high-margin items<br><br><strong>Products:</strong> Hand-knotted rugs, large blue pottery sets, miniature paintings, premium gift boxes</div>
+      </div>
+      <div class="tier biz">
+        <div class="tier-label">Corporate / B2B Tier</div>
+        <div class="tier-price">PKR 50K–500K+</div>
+        <div class="tier-examples"><strong>Purpose:</strong> High-AOV recurring B2B revenue<br><br><strong>Products:</strong> Bulk Eid gift sets, custom-branded craft, executive hampers, wedding favour programmes</div>
+      </div>
+    </div>
+
+    <h3>Pricing Models by Product Type</h3>
+    <table class="tbl">
+      <thead><tr><th>Model</th><th>How It Works</th><th>Applied To</th></tr></thead>
+      <tbody>
+        <tr><td>Commission Model</td><td>Artisan sets base price; Karigar takes 25–35% platform fee. Net to artisan always above market rate.</td><td>All standard marketplace listings</td></tr>
+        <tr><td>Inventory Model</td><td>Karigar buys select pieces outright for "Edit" drops. Full margin control.</td><td>Monthly Edit collections, Heritage Classics</td></tr>
+        <tr><td>Gift Set Premium</td><td>Bundle 3 items, price at 85% of individual sum, add premium packaging. Customer perceives value; margin on curation.</td><td>All gift sets and hampers</td></tr>
+        <tr><td>Corporate Custom</td><td>MOQ of 20 units. Volume discount 10–20%. Custom branding surcharge PKR 200–500/unit.</td><td>Corporate gifting bulk orders</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Discount & Promotion Rules</h3>
+    <div class="note"><strong>The Golden Rule:</strong> We never discount more than 20%, and we never discount without a story. Every discount needs a reason — Eid, a new drop launch, a loyalty reward, or a retiring artisan's last batch. Discounts without narrative cheapen the brand permanently.</div>
+    <ul class="pl">
+      <li><strong>Welcome Discount (10%):</strong> One-time, given in welcome email Day 7. Expires in 30 days. Drives first purchase conversion.</li>
+      <li><strong>Seasonal Promotions (15–20%):</strong> Tied to Eid (twice yearly), Independence Day, year-end. Always with a campaign narrative.</li>
+      <li><strong>Loyalty Discount (10% ongoing):</strong> Unlocked after second purchase. Applied automatically — positioned as a reward, not desperation.</li>
+      <li><strong>Referral Credit (PKR 500):</strong> Earned when a friend makes their first purchase. Feels like a gift, not a coupon.</li>
+      <li><strong>No Flash Sales, No Daily Deals:</strong> Brand killers in the premium segment. Never.</li>
+    </ul>
+
+    <h3>Pricing Psychology Tactics</h3>
+    <ul class="pl">
+      <li><strong>Price Anchoring:</strong> Show the most expensive item in a category first. The PKR 14,000 rug makes the PKR 4,500 cushion cover feel reasonable.</li>
+      <li><strong>Artisan Earnings Line:</strong> On product pages: "Artisan earns PKR X from this purchase." Customers who see this convert at higher rates — it removes guilt, adds pride.</li>
+      <li><strong>Clean Pricing — No .99:</strong> PKR 3,500 not PKR 3,499. Charm pricing signals mass market. Our pricing is confident and precise.</li>
+      <li><strong>True Scarcity Language:</strong> "Only 3 pieces left in this batch" or "This artisan completes 4–5 pieces per month." Real scarcity, never manufactured.</li>
+    </ul>
+
+    <div class="kpi-row">
+      <div class="kpi"><div class="kpi-val" style="color:var(--p2);">30%</div><div class="kpi-lbl">Platform commission on standard listings</div></div>
+      <div class="kpi"><div class="kpi-val" style="color:var(--p2);">55%</div><div class="kpi-lbl">Gross margin on inventory/Edit items</div></div>
+      <div class="kpi"><div class="kpi-val" style="color:var(--p2);">PKR 4,800</div><div class="kpi-lbl">Target AOV by Month 12</div></div>
+      <div class="kpi"><div class="kpi-val" style="color:var(--p2);">3:1</div><div class="kpi-lbl">Target LTV:CAC ratio</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════
+     P3 — PLACE
+════════════════════════ -->
+<div id="p3">
+  <div class="p-header p3-hdr">
+    <div class="p-num-bg" style="color:var(--p3);">P3</div>
+    <div class="p-eyebrow">Third P of Marketing</div>
+    <h2 class="p-title">Place & Distribution</h2>
+    <span class="p-pill p3-pill">Where & how customers buy from us</span>
+  </div>
+  <div class="p-body">
+    <div class="p-intro">Place is every point where a customer encounters, explores, and purchases from Karigar Collective. Our strategy is digital-first with deliberate physical presence — owning the premium shelf wherever our buyer shops.</div>
+
+    <h3>Primary Channel — karigar.pk (D2C Website)</h3>
+    <p>Our owned eCommerce website is the core of everything. All channels drive traffic here. This gives us full control over the brand experience, customer data, and margins — none of which exist when selling on third-party marketplaces.</p>
+    <ul class="pl">
+      <li><strong>Platform:</strong> Shopify — scalable, with excellent Pakistani payment gateway integrations (JazzCash, EasyPaisa, bank transfer, COD).</li>
+      <li><strong>UX Principle:</strong> Product pages structured as editorial features, not catalogue listings. Artisan name and portrait appear above the fold. The story appears before the price.</li>
+      <li><strong>Payment Mix:</strong> JazzCash, EasyPaisa, bank transfer, COD (domestic) + Stripe/PayPal (international). Incentivise digital payment with a PKR 100 "digital rebate" to reduce COD dependency over time.</li>
+      <li><strong>Mobile-First:</strong> 75%+ of Pakistani eCommerce is mobile. The site must perform flawlessly on a mid-range Android phone.</li>
+    </ul>
+
+    <h3>Secondary Digital Channels</h3>
+    <div class="card-row">
+      <div class="card card-p3"><div class="card-accent"></div><div class="card-head">Instagram Shop</div><div class="card-body">Product catalogue synced with website. Every post and Reel can be tagged as shoppable. This shortens the path from discovery to purchase — critical for impulse buys from new audiences who would otherwise lose momentum navigating to the website.</div></div>
+      <div class="card card-p3"><div class="card-accent"></div><div class="card-head">WhatsApp Business</div><div class="card-body">Dedicated number for queries, order tracking, and corporate gifting inquiries. In Pakistan, many buyers complete a purchase more comfortably via WhatsApp than a website checkout. Proper response protocol and product catalogue essential.</div></div>
+      <div class="card card-p3"><div class="card-accent"></div><div class="card-head">Daraz (Selective)</div><div class="card-body">List 15–20 entry-tier products only as a discovery channel. Price 10% higher than website to protect brand positioning and incentivise buying direct. Never discount on Daraz. It is a discovery funnel, not a home.</div></div>
+    </div>
+
+    <h3>Physical Distribution Strategy</h3>
+    <div class="ch-block">
+      <div class="ch-head"><div class="ch-icon">☕</div><div class="ch-name">Café & Boutique Placements</div><div class="ch-tag">Month 3+</div></div>
+      <div class="ch-body">
+        <p>Place 10–15 Karigar products in 3–5 design-forward cafés and lifestyle boutiques in Lahore, Karachi, and Islamabad. Products displayed with QR codes linking to the artisan's profile. Sold on consignment (70/30 split). The café becomes a living showroom at zero rent cost.</p>
+        <p><strong>Setup Kit:</strong> Each partner receives a branded shelf unit, product cards with QR codes, a framed "Karigar x [Café Name]" collab sign, and a monthly restocking schedule.</p>
+      </div>
+    </div>
+    <div class="ch-block">
+      <div class="ch-head"><div class="ch-icon">🏪</div><div class="ch-name">Quarterly Pop-Up Markets</div><div class="ch-tag">Every Quarter</div></div>
+      <div class="ch-body">
+        <p>Presence at curated lifestyle markets — Lahore Numaish, Karachi artisan markets, Islamabad craft fairs. The physical experience creates brand memories that digital cannot: the smell of natural dyes, the weight of a hand-thrown ceramic, the texture of woven fabric. Buyers who purchase at a pop-up have a 68% higher repeat purchase rate online.</p>
+        <p><strong>Booth Design:</strong> Warm lighting, wooden display fixtures, artisan portrait prints, workshop video playing on tablet. A Karigar brand installation — not a market stall. Every pop-up becomes 2 weeks of social content.</p>
+      </div>
+    </div>
+    <div class="ch-block">
+      <div class="ch-head"><div class="ch-icon">✈️</div><div class="ch-name">International — Diaspora Distribution</div><div class="ch-tag">Month 7+</div></div>
+      <div class="ch-body">
+        <p><strong>UAE Pilot:</strong> 50-order test to UAE. Partner with a Pakistani-owned boutique in Dubai for local fulfilment (eliminating customs complexity). Target communities in Jumeirah, Bur Dubai, Sharjah.</p>
+        <p><strong>UK Pilot:</strong> Consignment placement in a Pakistani diaspora lifestyle store in Bradford, Birmingham, or London. Online shipping via Royal Mail tracked service.</p>
+        <p><strong>Shipping Standard:</strong> International orders in premium rigid box, not bubble wrap envelope. Branded outer packaging. Tracked shipping. Customs documentation handled by Karigar — the customer never worries about paperwork.</p>
+      </div>
+    </div>
+
+    <h3>Order Fulfilment Process</h3>
+    <table class="tbl">
+      <thead><tr><th>Stage</th><th>Process</th><th>Timeline</th></tr></thead>
+      <tbody>
+        <tr><td>Order Placed</td><td>Confirmation email sent in 5 minutes. Artisan notified via WhatsApp within 2 hours.</td><td>Immediate</td></tr>
+        <tr><td>Production / Dispatch</td><td>In-stock: artisan dispatches to Karigar hub within 48 hrs. Made-to-order: 5–10 days.</td><td>1–10 days</td></tr>
+        <tr><td>Quality & Packaging</td><td>15-point QC check at packaging hub. Branded packaging applied if passed.</td><td>1 day</td></tr>
+        <tr><td>Courier Dispatch</td><td>TCS/Leopards domestic. DHL/FedEx international. Tracking sent via SMS + WhatsApp.</td><td>24 hrs after QC</td></tr>
+        <tr><td>Delivery</td><td>3–5 business days domestic. 7–14 days international. Day-before notification sent.</td><td>Per SLA</td></tr>
+        <tr><td>Returns</td><td>15-day return for damaged or not-as-described. Handmade variation is not a return reason — communicated clearly at purchase.</td><td>Refund in 5–7 days</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ════════════════════════
+     P4 — PROMOTION
+════════════════════════ -->
+<div id="p4">
+  <div class="p-header p4-hdr">
+    <div class="p-num-bg" style="color:var(--p4);">P4</div>
+    <div class="p-eyebrow">Fourth P of Marketing</div>
+    <h2 class="p-title">Promotion Strategy</h2>
+    <span class="p-pill p4-pill">How we create awareness, desire & conversion</span>
+  </div>
+  <div class="p-body">
+    <div class="p-intro">Promotion for Karigar is not advertising — it is cultural storytelling at scale. We do not promote products; we publish culture. Every piece of communication should make someone feel something before they feel an urge to buy.</div>
+
+    <h3>Target Audience Segments</h3>
+    <div class="card-row">
+      <div class="card card-p4"><div class="card-accent"></div><div class="card-head">The Aesthetic Gen-Z</div><div class="card-body">Ages 18–26. Discovers on TikTok, saves to Pinterest, buys on Instagram. Motivated by visual uniqueness and the "hidden gem" discovery. <strong>Trigger:</strong> Process content and beautiful object photography.</div></div>
+      <div class="card card-p4"><div class="card-accent"></div><div class="card-head">The Nostalgic Millennial</div><div class="card-body">Ages 27–42. Reconnects with heritage through objects. Higher disposable income and fierce loyalty once earned. <strong>Trigger:</strong> Artisan narratives, cultural storytelling, gifting occasions.</div></div>
+      <div class="card card-p4"><div class="card-accent"></div><div class="card-head">The Diaspora Buyer</div><div class="card-body">Pakistanis abroad — UAE, UK, North America. High AOV, emotionally driven. Buying Karigar is an act of cultural identity. <strong>Trigger:</strong> "Piece of home" messaging and heritage imagery.</div></div>
+      <div class="card card-p4"><div class="card-accent"></div><div class="card-head">The Gift Shopper</div><div class="card-body">Seasonal buyer driving outsized Eid and wedding revenue. Needs gift-ready options with premium packaging. <strong>Trigger:</strong> Curated gift sets, beautiful unboxing content, gifting guides.</div></div>
+    </div>
+
+    <h3>Social Media — Platform-Specific Playbooks</h3>
+    <div class="ch-block">
+      <div class="ch-head"><div class="ch-icon">📸</div><div class="ch-name">Instagram · @karigar.collective</div><div class="ch-tag">Brand Home</div></div>
+      <div class="ch-body">
+        <p>Instagram is our brand magazine — every post should feel like a page from a premium craft publication. Documentary-intimate, not corporate-polished.</p>
+        <h4>5 Content Pillars</h4>
+        <ul class="pl">
+          <li><strong>Maker Chronicles (35%):</strong> Artisan Reels at work. Real workshops, real faces. Raw ambient sound over music. Documentary intimacy beats production quality here.</li>
+          <li><strong>Object Study (25%):</strong> Extreme close-up product photography. The grain of wood, the irregularity of glaze, the imperfection that proves handmade. Make craft look as premium as luxury jewellery.</li>
+          <li><strong>Styled World (20%):</strong> Karigar products in real homes, natural light, lived-in settings. Not showroom staging — the product fits into a life.</li>
+          <li><strong>Cultural Context (15%):</strong> Educational carousels about specific craft traditions. Earns saves, builds authority, drives follows.</li>
+          <li><strong>Community Mirror (5%):</strong> Reshared customer photos and UGC. Validates the brand through real buyer experience.</li>
+        </ul>
+        <h4>Reel Concepts That Perform</h4>
+        <ul class="pl">
+          <li><em>"30 seconds with Ustad Bashir"</em> — full craft process in 30 seconds, no narration, ambient sound only. These consistently hit 100K+ views in the maker category.</li>
+          <li><em>"The imperfection is the point"</em> — close-up of handmade "flaws" with text: "This is not a defect. This is proof it was made by a human."</li>
+          <li><em>"Thrift store vs. Karigar"</em> — room transformation replacing generic décor with handmade pieces. Hook: "This is what your home looks like when it has a story."</li>
+          <li><em>"Unboxing as ritual"</em> — slow ASMR-style unboxing. Cotton bag, tissue, artisan note, product reveal. Pair with ambient trending audio.</li>
+        </ul>
+        <p><strong>Cadence:</strong> 5 posts/week (3 Reels, 2 carousels) | Daily Stories | 1–2 Lives/month with artisan Q&A</p>
+        <div class="tag-row">
+          <span class="tag p1c">#KarigarCollective</span><span class="tag p1c">#HandmadeByPakistan</span><span class="tag">#SlowLiving</span><span class="tag">#ArtisanMade</span><span class="tag">#MeetTheMaker</span><span class="tag">#PakistaniDesign</span><span class="tag">#HandmadeHome</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ch-block">
+      <div class="ch-head"><div class="ch-icon">🎵</div><div class="ch-name">TikTok · @karigar.collective</div><div class="ch-tag">Virality Engine</div></div>
+      <div class="ch-body">
+        <p>TikTok is our Gen-Z acquisition machine. Less polished, more immediate. A shaky phone video of something genuinely beautiful will outperform a produced brand film every time.</p>
+        <ul class="pl">
+          <li><strong>"Hidden Gem" Reveal:</strong> Hook — "Most people don't know this exists in Pakistan." Cut to workshop. End with "link in bio." TikTok gold in the discovery genre.</li>
+          <li><strong>Process Porn:</strong> Clay on wheel, fabric being block-printed, leather being stitched. Satisfying and shareable — trending audio does the rest.</li>
+          <li><strong>Cultural Education in 60 Seconds:</strong> "Did you know Ajrak is one of humanity's oldest printed fabrics?" The craft education genre has exploded in 2025–26.</li>
+          <li><strong>"Small Business Check" Format:</strong> Monthly revenue and milestone update. Authenticity and vulnerability perform exceptionally well on TikTok's small business community.</li>
+        </ul>
+        <p><strong>Cadence:</strong> 4–5 videos/week | Post 7–9 PM PKT domestic, 11 AM GMT for diaspora reach in UK</p>
+      </div>
+    </div>
+
+    <div class="ch-block">
+      <div class="ch-head"><div class="ch-icon">📌</div><div class="ch-name">Pinterest · Karigar Collective</div><div class="ch-tag">Evergreen SEO</div></div>
+      <div class="ch-body">
+        <p>Pinterest is our long-game SEO engine. Pins have a 4-month average lifespan vs. Instagram's 48-hour window. Our home décor content is natural Pinterest material — and our audience is actively in purchase mode while browsing.</p>
+        <ul class="pl">
+          <li><strong>"Pakistani Home Aesthetic"</strong> — Interior inspo with products naturally embedded.</li>
+          <li><strong>"The Artisan Archive"</strong> — Craft process photography and artisan portraits. Drives follows.</li>
+          <li><strong>"Handmade Gift Guide"</strong> — Evergreen board with seasonal traffic spikes pre-Eid and pre-holidays.</li>
+          <li><strong>"The Karigar Edit"</strong> — New arrivals and curated collections with direct Shopping Pin links.</li>
+        </ul>
+        <p><strong>Pin SEO Keywords:</strong> "handmade home decor Pakistan," "Pakistani pottery gifts," "artisan crafts online," "ethical home décor," "Pakistani interior styling."</p>
+      </div>
+    </div>
+
+    <h3>Content Strategy</h3>
+    <div class="card-row">
+      <div class="card card-p4"><div class="card-accent"></div><div class="card-head">The Karigar Diaries</div><div class="card-body">Long-form artisan profiles — 1,200–2,000 words, photographed like a National Geographic feature. Life, craft, family legacy, technique. These rank on Google, earn press attention, and build the authority no paid ad can replicate.</div></div>
+      <div class="card card-p4"><div class="card-accent"></div><div class="card-head">The Monthly Edit</div><div class="card-body">Themed curated drops: "The Monsoon Edit," "Ramadan Home," "The Winter Table." Each gets a dedicated landing page, email campaign, and a week of supporting social content. Creates urgency, editorial identity, and conversation.</div></div>
+      <div class="card card-p4"><div class="card-accent"></div><div class="card-head">Impact Reports (Quarterly)</div><div class="card-body">"Your purchases this quarter generated X artisan hours, supported Y families, preserved Z crafts." One-page visual published across all channels. Transforms buyers into stakeholders. Costs nothing to produce. Priceless in trust-building.</div></div>
+      <div class="card card-p4"><div class="card-accent"></div><div class="card-head">Craft School (Blog)</div><div class="card-body">Educational SEO content: "Everything about Sindhi Ajrak," "8 types of Pakistani embroidery," "Blue pottery of Multan — a complete guide." Positions Karigar as the cultural authority and drives long-tail search traffic year-round.</div></div>
+    </div>
+
+    <h3>Influencer Marketing Strategy</h3>
+    <div class="note"><strong>Core Rule:</strong> We do not chase big numbers. We chase the right person with the right audience who genuinely loves what they're sharing. One authentic post from a 30K home décor creator converts better than a paid post from a 500K lifestyle celebrity.</div>
+    <table class="tbl">
+      <thead><tr><th>Tier</th><th>Followers</th><th>Approach</th><th>Budget</th></tr></thead>
+      <tbody>
+        <tr><td>Nano</td><td>3K–15K</td><td>Product gifting. High engagement, trusted community, authentic content generation.</td><td>Product cost only (PKR 3K–8K)</td></tr>
+        <tr><td>Micro</td><td>15K–80K</td><td>Gift + small fee. The sweet spot — high trust, real audience, genuine brand love.</td><td>PKR 10K–35K + product</td></tr>
+        <tr><td>Mid-Tier</td><td>80K–250K</td><td>Paid partnerships for Eid, seasonal drops, Independence Day campaigns.</td><td>PKR 40K–120K per post</td></tr>
+        <tr><td>Macro</td><td>250K+</td><td>Collaboration only — co-designed product or genuine brand alignment required. Very selective use.</td><td>PKR 150K+ — use sparingly</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Influencer Campaign Concept</h3>
+    <div class="camp">
+      <div class="camp-season">Influencer Activation · 15 Micro-Influencers</div>
+      <div class="camp-name">"Whose Hands Made This?"</div>
+      <div class="camp-body">Send 15 micro-influencers a Karigar product with a sealed card: "Before you unbox this — look at your own hands. Now look at what someone else's hands made for you." The unboxing becomes a moment of reflection. Aggregate all reactions into a campaign highlight reel. Estimated spend: PKR 120,000. Estimated reach: 400,000–600,000 impressions. ROI: priceless in authenticity.</div>
+    </div>
+
+    <h3>Paid Advertising Strategy (Month 4+)</h3>
+    <div class="note"><strong>The Rule:</strong> We do not run paid media until organic posts demonstrate at least 3–4% engagement rate. We boost what works — never what we hope will work.</div>
+    <div class="two">
+      <div>
+        <h4>Meta Campaign Structure</h4>
+        <ul class="pl">
+          <li><strong>Awareness (PKR 15K/month):</strong> Artisan process Reels to cold audiences interested in home décor, sustainable living, and Pakistani heritage.</li>
+          <li><strong>Traffic (PKR 10K/month):</strong> Carousel ads to product pages and blog posts. Objective: qualified visitors.</li>
+          <li><strong>Conversion (PKR 20K/month):</strong> Retargeting website visitors, Instagram engagers (30-day window), email lookalike audiences. Objective: Purchase.</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Creative Principles</h4>
+        <ul class="pl">
+          <li>First 2 seconds must arrest attention — artisan hands in motion, a product reveal, a before/after.</li>
+          <li>Lead with story, not product: "Zainab has been weaving for 30 years." Then the CTA.</li>
+          <li>Test 3 creative variants per ad set: video, carousel, single image.</li>
+          <li>UGC customer photos convert 3× better than brand photography in retargeting ads.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi"><div class="kpi-val" style="color:var(--p4);">2.5×</div><div class="kpi-lbl">Minimum ROAS before scaling any ad set</div></div>
+      <div class="kpi"><div class="kpi-val" style="color:var(--p4);">4×</div><div class="kpi-lbl">Target ROAS for retargeting campaigns</div></div>
+      <div class="kpi"><div class="kpi-val" style="color:var(--p4);">PKR 450</div><div class="kpi-lbl">Max customer acquisition cost (CAC)</div></div>
+      <div class="kpi"><div class="kpi-val" style="color:var(--p4);">Month 6+</div><div class="kpi-lbl">Google Ads start (PKR 10K/month)</div></div>
+    </div>
+
+    <h3>Email Marketing Strategy</h3>
+    <p>Email is the one channel we own completely — no algorithm, no platform risk, no pay-to-play. An engaged list of 5,000 is worth more than 50,000 social followers who only hear from us when Meta allows it.</p>
+    <h4>Lead Magnet — "The Karigar Field Guide"</h4>
+    <p>A free 20-page PDF: <em>"12 Pakistani Crafts Worth Owning."</em> Visual, educational, genuinely valuable before any purchase. Pop-up triggered at 40 seconds on site. Expected conversion rate: 35–50%.</p>
+    <h4>Welcome Sequence (5 emails over 10 days)</h4>
+    <ol class="pl">
+      <li><strong>Day 0:</strong> Deliver guide + brand philosophy. Subject: "Your Field Guide is inside — and so is a story you won't forget."</li>
+      <li><strong>Day 2:</strong> One artisan profile, full story, their collection. Soft sell. Subject: "This is Ustad Ahmed. These are his hands."</li>
+      <li><strong>Day 4:</strong> Founder story — the mission behind Karigar. Subject: "The honest reason we started this."</li>
+      <li><strong>Day 7:</strong> First product email. Curated carousel. 10% welcome discount valid 30 days. Subject: "These 8 pieces are currently in our workshop."</li>
+      <li><strong>Day 10:</strong> Quality and ethics explainer — how we vet artisans, ensure fair wages. Subject: "Every artisan on our platform earns above market rate. Here's how."</li>
+    </ol>
+
+    <h3>Seasonal Campaign Ideas</h3>
+    <div class="camp">
+      <div class="camp-season">Ramadan & Eid — 6 Weeks</div>
+      <div class="camp-name">"The Gift That Remembers"</div>
+      <div class="camp-body"><strong>Hook:</strong> "Some gifts get returned. Some gifts get remembered." Launch "The Ramadan Edit" — curated collection for Iftar tables, prayer spaces, and Eid gifting. Weeks 1–2: cultural content. Weeks 3–4: gift guides. Week 5: Eid gift boxes with artisan notes. Week 6: UGC collection. <strong>Target:</strong> 25–30% of annual revenue from this campaign.</div>
+    </div>
+    <div class="camp">
+      <div class="camp-season">14 August — 2 Weeks</div>
+      <div class="camp-name">"Made in Pakistan. Proud of it."</div>
+      <div class="camp-body"><strong>Hook:</strong> "14 Crafts for 14 August" — one regional craft profiled daily in the countdown. Viral post: "Name one craft that's 100% Pakistani." Limited "Heritage Series" drop only available this week. Goal: one organic TikTok/Reel with 500K+ views.</div>
+    </div>
+    <div class="camp">
+      <div class="camp-season">Women's Day — March</div>
+      <div class="camp-name">"The Karigar Behind the Karigar"</div>
+      <div class="camp-body"><strong>Hook:</strong> Pakistan's artisan workforce is majority female — and their stories are almost entirely untold. 5 female artisan profiles over one week. Campaign hashtag: #KarigarWomen. 10% of that week's sales donated to artisan upskilling. Earns press coverage and demonstrates genuine mission-driven values.</div>
+    </div>
+
+    <h3>SEO Strategy</h3>
+    <h4>Technical Foundation (Month 1)</h4>
+    <ul class="pl">
+      <li>Site loads under 2 seconds on mobile — all images compressed to WebP</li>
+      <li>Product Schema, Review Schema, Breadcrumb Schema for Google rich snippets</li>
+      <li>Google Search Console and GA4 live from day one. Track all goal completions.</li>
+      <li>Clean URL structure: karigar.pk/craft/ajrak-stoles not karigar.pk/product?id=4821</li>
+    </ul>
+    <h4>Month 1–6 Blog Calendar</h4>
+    <ul class="pl">
+      <li>"The 15 most beautiful handmade crafts you can buy from Pakistan right now"</li>
+      <li>"What is Ajrak? The 5,000-year-old fabric Pakistan is famous for"</li>
+      <li>"Best handmade Eid gift ideas 2026 — that aren't boring"</li>
+      <li>"Blue pottery of Multan: a complete guide to Pakistan's most iconic craft"</li>
+      <li>"How to style a home with Pakistani handmade craft — 10 designers share their picks"</li>
+      <li>"How to support Pakistani artisans from abroad — the diaspora buyer's guide"</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ════ BUDGET ════ -->
+<div style="padding:60px 0 50px;border-bottom:1px solid var(--border);">
+  <p style="font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;font-weight:600;">Finance</p>
+  <h2 style="font-family:'Playfair Display',serif;font-size:clamp(26px,3.5vw,38px);font-weight:600;color:var(--ink);margin-bottom:28px;">Budget Allocation</h2>
+  <p style="color:var(--muted);font-style:italic;font-family:'Playfair Display',serif;font-size:16px;margin-bottom:28px;">Monthly budget ~PKR 120,000 at mid-year. Every rupee tied to a measurable outcome.</p>
+
+  <div class="bgt-item"><div class="bgt-label">Content Creation (Photography/Video)</div><div class="bgt-track"><div class="bgt-fill" style="width:28%;background:var(--p1);"></div></div><div class="bgt-pct" style="color:var(--p1);">28%</div></div>
+  <div class="bgt-item"><div class="bgt-label">Meta Paid Advertising</div><div class="bgt-track"><div class="bgt-fill" style="width:24%;background:var(--p4);"></div></div><div class="bgt-pct" style="color:var(--p4);">24%</div></div>
+  <div class="bgt-item"><div class="bgt-label">Influencer Partnerships</div><div class="bgt-track"><div class="bgt-fill" style="width:18%;background:var(--p2);"></div></div><div class="bgt-pct" style="color:var(--p2);">18%</div></div>
+  <div class="bgt-item"><div class="bgt-label">Packaging & Unboxing Experience</div><div class="bgt-track"><div class="bgt-fill" style="width:12%;background:var(--p3);"></div></div><div class="bgt-pct" style="color:var(--p3);">12%</div></div>
+  <div class="bgt-item"><div class="bgt-label">Email Platform + CRM (Klaviyo)</div><div class="bgt-track"><div class="bgt-fill" style="width:8%;background:var(--p4);"></div></div><div class="bgt-pct" style="color:var(--p4);">8%</div></div>
+  <div class="bgt-item"><div class="bgt-label">SEO Tools + Blog Writing</div><div class="bgt-track"><div class="bgt-fill" style="width:6%;background:var(--p2);"></div></div><div class="bgt-pct" style="color:var(--p2);">6%</div></div>
+  <div class="bgt-item"><div class="bgt-label">Pop-Ups & Community Events</div><div class="bgt-track"><div class="bgt-fill" style="width:4%;background:var(--p3);"></div></div><div class="bgt-pct" style="color:var(--p3);">4%</div></div>
+</div>
+
+<!-- ════ KPIs ════ -->
+<div style="padding:60px 0 50px;border-bottom:1px solid var(--border);">
+  <p style="font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;font-weight:600;">Measurement</p>
+  <h2 style="font-family:'Playfair Display',serif;font-size:clamp(26px,3.5vw,38px);font-weight:600;color:var(--ink);margin-bottom:28px;">KPIs & Performance Metrics</h2>
+
+  <table class="tbl">
+    <thead><tr><th>Metric</th><th>P Alignment</th><th>Month 3</th><th>Month 6</th><th>Month 12</th></tr></thead>
+    <tbody>
+      <tr><td>Monthly GMV</td><td>All 4 Ps</td><td>PKR 300K</td><td>PKR 1.2M</td><td>PKR 5M</td></tr>
+      <tr><td>Average Order Value</td><td>P2 Price</td><td>PKR 3,200</td><td>PKR 4,000</td><td>PKR 4,800</td></tr>
+      <tr><td>Website Conversion Rate</td><td>P3 Place</td><td>1.5%</td><td>2.0%</td><td>2.8%</td></tr>
+      <tr><td>Customer Acquisition Cost</td><td>P4 Promotion</td><td>PKR 600</td><td>PKR 480</td><td>PKR 380</td></tr>
+      <tr><td>Repeat Purchase Rate</td><td>P1 Product</td><td>10%</td><td>20%</td><td>32%</td></tr>
+      <tr><td>Return Rate</td><td>P1 Product</td><td>&lt;5%</td><td>&lt;3%</td><td>&lt;2%</td></tr>
+      <tr><td>Instagram Engagement Rate</td><td>P4 Promotion</td><td>3.5%</td><td>4.5%</td><td>5%+</td></tr>
+      <tr><td>Email List Size</td><td>P4 Promotion</td><td>1,000</td><td>4,500</td><td>12,000</td></tr>
+      <tr><td>Meta Ad ROAS</td><td>P4 Promotion</td><td>—</td><td>2.5× min</td><td>4×+</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ════ 12-MONTH ROADMAP ════ -->
+<div style="padding:60px 0 50px;">
+  <p style="font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;font-weight:600;">Roadmap</p>
+  <h2 style="font-family:'Playfair Display',serif;font-size:clamp(26px,3.5vw,38px);font-weight:600;color:var(--ink);margin-bottom:10px;">12-Month Growth Strategy</h2>
+  <p style="color:var(--muted);font-style:italic;font-family:'Playfair Display',serif;font-size:16px;margin-bottom:32px;">Four quarters. Each phase builds on the last — with a clear 4P focus at every stage.</p>
+
+  <div class="tl">
+    <div class="tl-item">
+      <div class="tl-phase">Q1 · Months 1–3 · Build</div>
+      <div class="tl-title">Product Foundation Before Traffic</div>
+      <div class="tl-body"><strong>P Focus: P1 (Product), P3 (Place — digital setup)</strong><br><br>Build before marketing. Lock brand identity, website, artisan documentation (10+ profiles), photography system, and packaging before any paid spend. You cannot scale a leaky bucket.<br><br><strong>Milestones:</strong> Website live with 60–80 SKUs. Lead magnet converting at 35%+. 1,000 email subscribers. 5,000 Instagram followers organically. 5 micro-influencer gifting relationships active. Packaging system and QC process operational.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-phase">Q2 · Months 4–6 · Launch</div>
+      <div class="tl-title">First Revenue, First Price Validation</div>
+      <div class="tl-body"><strong>P Focus: P4 (Promotion — paid), P2 (Price — validation)</strong><br><br>Activate Meta Ads now that organic has proven what content works. Test pricing and bundle structures. Launch Instagram Shop and WhatsApp Business properly. First Eid campaign if timing aligns.<br><br><strong>Milestones:</strong> 500+ total orders. PKR 1.2M cumulative GMV. 15,000 Instagram followers. 4,500 email subscribers. First Meta campaign at 2.5× ROAS. One press feature in a lifestyle publication.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-phase">Q3 · Months 7–9 · Scale</div>
+      <div class="tl-title">Expand Distribution & Double Down</div>
+      <div class="tl-body"><strong>P Focus: P3 (Place — physical & international), P4 (Promotion — scale)</strong><br><br>Scale winning ad campaigns. Launch referral programme. Activate café placement in 3 cities. Independence Day campaign. Expand artisan catalogue to 35+ makers. UAE diaspora pilot (50 orders).<br><br><strong>Milestones:</strong> 200+ monthly orders consistently. PKR 2.5M monthly GMV. 8,000 email subscribers. 25,000 Instagram followers. One TikTok with 500K+ views. 10 corporate gifting clients.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-phase">Q4 · Months 10–12 · Community</div>
+      <div class="tl-title">Brand Becomes the Moat</div>
+      <div class="tl-body"><strong>P Focus: All 4 Ps operating cohesively</strong><br><br>Winter campaign. Loyalty programme maturity. First physical artisan event. Investor-ready metrics package. Pilot artisan co-design "Limited Edition" collection. Prepare Year 2 plan with data-backed decisions.<br><br><strong>Milestones:</strong> PKR 5M monthly GMV. 32%+ repeat purchase rate. 12,000 email subscribers. 40,000+ total social following. NPS &gt;60. 50+ verified artisans. First major press feature. Annual artisan gathering held.</div>
+    </div>
+  </div>
+
+  <div class="hl">
+    <div class="hl-label">The 12-Month North Star</div>
+    <div class="hl-text">By Month 12, all 4 Ps are performing as one integrated system — a product people are proud to own, priced to reflect its genuine cultural value, available everywhere our buyer looks, and promoted through stories that make people feel something before they buy anything.</div>
+  </div>
+</div>
+
+</div><!-- /wrap -->
+
+<div class="footer">
+  <div>
+    <div class="footer-brand">Karigar<em>.</em> Collective</div>
+    <div style="font-size:12px;color:rgba(255,255,255,.28);margin-top:6px;font-style:italic;font-family:'Playfair Display',serif;">"Handmade. Heritage. Heart."</div>
+    <div class="footer-ps">
+      <span class="footer-p" style="color:#D4804A;border-color:rgba(181,68,14,.4);">P1 Product ✓</span>
+      <span class="footer-p" style="color:#C9A840;border-color:rgba(122,92,10,.4);">P2 Price ✓</span>
+      <span class="footer-p" style="color:#60B860;border-color:rgba(44,92,40,.4);">P3 Place ✓</span>
+      <span class="footer-p" style="color:#A090D0;border-color:rgba(58,40,112,.4);">P4 Promotion ✓</span>
+    </div>
+  </div>
+  <div class="footer-right">
+    4P Marketing Plan · Product-Based Edition<br>
+    Karigar Collective © 2026<br>
+    Confidential · Version 1.0
+  </div>
+</div>
+
+</body>
+</html>
